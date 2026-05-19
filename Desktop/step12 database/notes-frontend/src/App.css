@@ -1,0 +1,128 @@
+.notes-page {
+  min-height: 100vh;
+  padding: 32px 16px;
+  background:
+    radial-gradient(circle at 10% 20%, rgba(255, 255, 255, 0.75), transparent 35%),
+    radial-gradient(circle at 90% 10%, rgba(255, 214, 102, 0.55), transparent 30%),
+    linear-gradient(140deg, #f6fbff 0%, #eef4ff 45%, #fff6e8 100%);
+}
+
+.notes-card {
+  max-width: 760px;
+  margin: 0 auto;
+  padding: 28px;
+  border-radius: 20px;
+  background-color: rgba(255, 255, 255, 0.84);
+  border: 1px solid rgba(35, 66, 132, 0.12);
+  box-shadow: 0 24px 40px rgba(17, 34, 68, 0.14);
+  
+}
+
+.notes-card h1 {
+  margin: 0 0 20px;
+  font-size: clamp(1.9rem, 4vw, 2.4rem);
+  color: #163266;
+  letter-spacing: 0.02em;
+}
+
+.notes-form {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.notes-input {
+  flex: 1;
+  border: 1px solid #bfd3ff;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 1rem;
+  background: #ffffff;
+}
+
+.notes-input:focus {
+  outline: none;
+  border-color: #4f83ff;
+  box-shadow: 0 0 0 3px rgba(79, 131, 255, 0.16);
+}
+
+.notes-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  gap: 12px;
+}
+
+.note-item {
+  display: grid;
+  grid-template-columns: 1fr auto auto;
+  gap: 10px;
+  align-items: center;
+  padding: 12px;
+  border-radius: 12px;
+  background-color: rgba(255, 255, 255, 0.95);
+  border: 1px solid rgba(37, 74, 143, 0.14);
+}
+
+.note-content {
+  color: #23334f;
+  line-height: 1.4;
+}
+
+.note-badge {
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-weight: 600;
+}
+
+.note-badge-important {
+  color: #664100;
+  background-color: #ffe9b3;
+}
+
+.note-badge-normal {
+  color: #215136;
+  background-color: #cfeedd;
+}
+
+.btn {
+  border: none;
+  border-radius: 10px;
+  padding: 10px 14px;
+  font-size: 0.95rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.btn-add {
+  background-color: #1e4ab3;
+  color: #ffffff;
+}
+
+.btn-delete {
+  background-color: #f7d8d8;
+  color: #7f1212;
+}
+
+.btn:hover {
+  filter: brightness(0.95);
+}
+
+@media (max-width: 620px) {
+  .notes-card {
+    padding: 18px;
+  }
+
+  .notes-form {
+    flex-direction: column;
+  }
+
+  .note-item {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+}
